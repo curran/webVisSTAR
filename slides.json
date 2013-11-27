@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Web-based Data Visualization",
+    "name": "intro",
+    "author": "Curran Kelleler",
+    "date": "11/27/2013",
+    "type": "firstSlide"
+  },
+  {
+    "title": "Data Visualization",
+    "name": "dataVisualization",
+    "type": "section"
+  },
+  {
+    "title": "Visualization Theory",
+    "name": "visTheory",
+    "type": "slide"
+  }
+]

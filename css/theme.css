@@ -1,0 +1,107 @@
+/**
+ * The styles for the notes pages.
+ * By Curran Kelleher 11/9/2013.
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Style hyperlinks to underline on hover. */
+a {
+  text-decoration:none;
+  color: #006269;
+}
+a:visited {
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+
+#outline {
+  position: fixed;
+  top: 0px;
+  bottom: 0%;
+  left: 0%;
+  right: 80%;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #E0E0E0;
+  line-height: 170%;
+  color: #006269;
+}
+
+#outline .firstSlide {
+  font-size:1.8em;
+}
+#outline .section {
+  font-size:1.4em;
+}
+#outline .slide {
+  font-size:1em;
+  padding-left:15px;
+}
+
+.selected {
+  color: black;
+}
+
+.author {
+  font-size:1em;
+  padding-bottom: 10px;
+}
+#outline li {
+  font-size: 1em;
+  list-style:none; /* Get rid of normal bullet */
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+#outline li:before {
+  content: "\2022";
+  font-size:1.5em;
+  position: relative;
+  top:0.13em;
+  padding-right:.25em;
+}
+
+
+#slide {
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 20%;
+  right: 0%;
+
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  line-height: 110%;
+
+  font-size: 1.3em;
+}
+
+#slide li {
+  font-size: 1.3em;
+  list-style:none; /* Get rid of normal bullet */
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+/* This styled bullet replaces the normal one */
+#slide li:before {
+  content: "\2022";
+  font-size:1.5em;
+  position: relative;
+  top:0.13em;
+  padding-right:.25em;
+}
+/* Style headings inside entries. */
+h1 {
+  font-size: 1.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #006269;
+}
