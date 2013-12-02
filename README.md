@@ -16,7 +16,7 @@ Topics of discussion include:
    * Various Scales of Data
    * Spreadsheets and CSV Files
      * iris.csv
-   * Custom File Organization
+   * File System Organization
      * BLS FTP site
    * Relational Databases
    * NoSQL Databases

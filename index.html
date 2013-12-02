@@ -27,16 +27,17 @@
     <script src="libs/moment.js"></script>
     <script src="libs/marked.js"></script>
     <script src="libs/async.js"></script>
-    <link rel="stylesheet" href="libs/highlight/styles/github.css">
 
     <!-- The template for the index page that lists all entries. -->
     <script type="text/x-handlebars-template" id="outline-template">
       {{#each slides}}
-        <a href="#{{name}}">
-          <div id="{{name}}" class="{{type}}">{{title}}</div>
-        </a>
+        {{#if title}}
+          <a href="#{{name}}">
+            <div id="{{name}}" class="{{type}}">{{title}}</div>
+          </a>
+        {{/if}}
         {{#if author}}
-          <div class="author">by {{author}} {{date}}</div>
+          <div class="author">by <a href="{{authorLink}}">{{author}}</a> {{date}}</div>
         {{/if}}
       {{/each}}
     </script>

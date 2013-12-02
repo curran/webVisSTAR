@@ -1,19 +1,29 @@
 [
   {
     "title": "Web-based Data Visualization",
-    "name": "intro",
-    "author": "Curran Kelleler",
+    "author": "Curran Kelleher",
+    "authorLink": "https://github.com/curran/portfolio",
     "date": "11/27/2013",
+    "name": "intro",
     "type": "firstSlide"
   },
-  {
-    "title": "Data Visualization",
-    "name": "dataVisualization",
-    "type": "section"
-  },
-  {
-    "title": "Visualization Theory",
-    "name": "visTheory",
-    "type": "slide"
-  }
+  { "title": "Data Visualization", "name": "dataVisualization", "type": "section" },
+    { "title": "Anscombe's Quartet", "name": "anscombe", "type": "slide" },
+    { "title": "Visualization Theory", "name": "visTheory", "type": "slide" },
+    { "title": "Bertin's Theory", "name": "bertin", "type": "slide" },
+    { "title": "Mackinlay's Theory", "name": "mackinlay", "type": "slide" },
+    { "title": "Fry's Process", "name": "fry", "type": "slide" },
+  { "title": "Data Scale", "name": "scale", "type": "section" },
+    { "title": "Data Reduction", "name": "reduction", "type": "slide" },
+    { "title": "Data Cubes", "name": "cubes", "type": "slide" },
+    { "title": "Data Cube Example", "name": "cubesFigure", "type": "slide" },
+    { "title": "Data Integration", "name": "integration", "type": "slide" },
+  { "title": "Web Graphics", "name": "webGraphics", "type": "section" },
+    { "title": "Canvas", "name": "canvas", "type": "slide" },
+    { "title": "SVG", "name": "svg", "type": "slide" },
+    { "title": "WebGL", "name": "webGL", "type": "slide" },
+    { "title": "Web Visualization", "name": "webVis", "type": "slide" },
+  { "title": "Research Directions", "name": "research", "type": "section" },
+    { "title": "Public Data Sets", "name": "datasets", "type": "slide" },
+    { "title": "The Semantic Web", "name": "semWeb", "type": "slide" }
 ]
