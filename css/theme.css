@@ -1,8 +1,7 @@
 /**
  * The styles for the notes pages.
- * By Curran Kelleher 11/9/2013.
+ * By Curran Kelleher 12/2/2013.
  */
-
 body {
   font-family: 'Open Sans', sans-serif;
   width: 100%;
@@ -101,11 +100,6 @@ a:hover {
   padding-right:.25em;
 }
 
-#slide img {
-  position: relative;
-  height: 500px;
-}
-
 /* Style headings inside entries. */
 h1 {
   font-size: 1.8em;
@@ -113,3 +107,13 @@ h1 {
   padding-bottom: 10px;
   color: #006269;
 }
+
+/* Style the block quotes. */
+
+blockquote {
+  margin: 0px;
+  padding: 10px;
+  quotes: "\201C" "\201D";
+}
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after { content: close-quote; font-weight: bold; }

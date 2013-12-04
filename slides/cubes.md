@@ -1,5 +1,6 @@
 # Data Cubes
 
+ * also known as [OLAP Cubes](http://en.wikipedia.org/wiki/OLAP_cube), from [Data Warehousing](http://en.wikipedia.org/wiki/Data_warehouse)
  * A multi-scale data representation
  * Contains aggregated multidimensional data
  * Key concepts: dimensions and measures

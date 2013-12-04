@@ -1,9 +1,12 @@
 # Web-based Data Visualization
+
+[github.com/curran/webVisSTAR](https://github.com/curran/webVisSTAR)
+
 by Curran Kelleher
 
- * Data Visualization
- * Data Scale
+ * A broad state of the art survey of:
+ * Data
+ * Visualization
  * Web Graphics Technologies
  * Research Directions
- * Not comprehensive
- * Presentation Goal: provide practical value
+ * Presentation goal: provide fresh ideas & interesting pointers

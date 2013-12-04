@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+  A simple "IDE" for showing editable example code.
+  The code re-runs every time the code is changed.
+  Inlet.js provides interactive sliders and color pickers.
+
+  Inspired by CodeMirror example code found at
+  http://codemirror.net/1/mixedtest.html
+
+  Curran Kelleher 10/7/2013
+-->
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Example IDE</title>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/underscore-min.js"></script>
+
+    <!-- CodeMirror is a library for syntax highlighted code editing. -->
+    <link rel="stylesheet" href="lib/codemirror-3.18/lib/codemirror.css">
+    <link rel="stylesheet" href="lib/codemirror-3.18/addon/hint/show-hint.css">
+    <script src="lib/codemirror-3.18/lib/codemirror.js"></script>
+    <script src="lib/codemirror-3.18/addon/hint/show-hint.js"></script>
+    <script src="lib/codemirror-3.18/addon/hint/xml-hint.js"></script>
+    <script src="lib/codemirror-3.18/addon/hint/html-hint.js"></script>
+    <script src="lib/codemirror-3.18/mode/xml/xml.js"></script>
+    <script src="lib/codemirror-3.18/mode/javascript/javascript.js"></script>
+    <script src="lib/codemirror-3.18/mode/css/css.js"></script>
+    <script src="lib/codemirror-3.18/mode/htmlmixed/htmlmixed.js"></script>
+
+    <!-- Load Inlet, which provides sliders and color pickers for CodeMirror.
+         see https://github.com/enjalot/Inlet -->
+    <script src="lib/inlet.js"></script>
+    <link rel="stylesheet" href="lib/inlet.css">
+
+    <style>
+      #editor, #output {
+        position: fixed;
+        top: 0%;
+        width: 50%;
+        height: 100%;
+        left: 0%;
+        font-size:14px;
+        border: none;
+      }
+      #output { left: 50%; }
+      #runLink {
+        position: fixed;
+        top: 0%;
+        right: 52%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- The code editor -->
+    <div id="editor"></div>
+
+    <!-- The running code -->
+    <iframe id="output" src="loading.html"></iframe>
+
+    <a id="runLink" target="blank">run</a>
+
+    <script>
+      (function () {
+
+        // When 'saveEnabled' is true, the editor makes a POST request
+        // every time the text is changed with the current version to save.
+        // The server side replaces the example source file with the content.
+        var saveEnabled = true,
+
+            // Use CodeMirror to make the editor div into a code editor.
+            codeMirror = CodeMirror($('#editor')[0], {
+              mode: 'text/html',
+              lineNumbers: true
+            }),
+            out = $('#output')[0],
+            exampleName = window.location.hash.substr(1);
+            
+        runLink.setAttribute('href', exampleName + '.html');
+
+        // Creates a data URL which yields an HTML page with 
+        // the given source code in it when loaded.
+        //function codeToDataURL(code) {
+        //  var prefix = 'data:text/html;charset=utf-8,';
+        //  return prefix + encodeURIComponent(code);
+        //}
+
+        // Runs the code in the "output" iFrame.
+        // Executes at a rate not more than once every 50ms.
+        // (throttle = executes every 50ms as you type)
+        var run = _.throttle(function (code) {
+
+          // The DataURL approach doesn't support relative URLs for libs
+          //out.setAttribute('src', codeToDataURL(code))
+
+          // The 'srcdoc' approach supports relative paths for libs,
+          // but is only supported in Chrome and Safari.
+          out.setAttribute('srcdoc', code);
+        }, 50);
+
+        // Saves the modified code back into the example source file.
+        // Executes at a rate not more than once every two seconds.
+        // (debounce = executes 2 seconds after you stop typing)
+        var save = _.debounce(function (code){
+
+          // Only save in development mode, not when viewing in GitHub Pages.
+          // To turn on saving, add #save to the end of the URL.
+          if(document.URL.match('localhost')) {
+
+            // See server.js for middleware that saves the file.
+
+            if(saveEnabled) {
+              $.post('save/' + exampleName, {code: code});
+            }
+          }
+        }, 2000);
+            
+        // Inlet provides sliders and color pickers.
+        Inlet(codeMirror);
+
+        // Fill the space with the editor.
+        codeMirror.setSize('100%', '100%');
+
+        // Load the example HTML page into the editor,
+        // as specified by the text after the hash in the URL of this page.
+        $.get(exampleName + '.html', function (code){
+
+          // Put the loaded code into the editor.
+          codeMirror.setOption('value', code);
+
+          run(code);
+
+          // When the code changes, run it and save it.
+          codeMirror.on('change', function () {
+            var code = codeMirror.getValue();
+            run(code);
+            save(code);
+          });
+        });
+      }());
+    </script>
+  </body>
+</html>
