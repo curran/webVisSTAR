@@ -1,5 +1,6 @@
 # Research Directions
-
- * Visualizations are limited by memory, pixels, bandwidth
- * Data must be reduced in size for visualization
- * Interaction with "Big Data" through visualizations
+ * Web Visualization
+ * Big Data Visualization
+ * The Semantic Web
+ * My Recent Work
+ * My Interests
