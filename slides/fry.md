@@ -8,4 +8,4 @@
  * Refine - iterate to improve the visual representation
  * Interact - add interactions to the visual representation
 
-from Ben Fry's 2007 book Visualizing Data
+from [Ben Fry's book Visualizing Data](http://www.amazon.com/Visualizing-Data-Explaining-Processing-Environment/dp/0596514557)

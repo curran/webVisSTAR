@@ -8,10 +8,10 @@
     "type": "firstSlide"
   },
   { "title": "Data", "name": "data", "type": "section" },
+    { "title": "Tabular Data", "name": "tabular", "type": "slide" },
     { "title": "NoSQL Systems", "name": "nosql", "type": "slide" },
     { "title": "Data Cubes", "name": "cubes", "type": "slide" },
     { "title": "Data Cube Example", "name": "cubesFigure", "type": "slide" },
-    { "title": "Data Integration", "name": "integration", "type": "slide" },
   { "title": "Visualization", "name": "dataVisualization", "type": "section" },
     { "title": "Visualization Theory", "name": "visTheory", "type": "slide" },
     { "title": "Bertin's Theory", "name": "bertin", "type": "slide" },
@@ -26,5 +26,6 @@
     { "title": "Web Visualization", "name": "webVis", "type": "slide" },
     { "title": "Big Data Visualization", "name": "bigData", "type": "slide" },
     { "title": "The Semantic Web", "name": "semWeb", "type": "slide" },
+    { "title": "My Recent Work", "name": "r7work", "type": "slide" },
     { "title": "My Interests", "name": "interests", "type": "slide" }
 ]

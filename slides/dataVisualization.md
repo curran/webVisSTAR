@@ -6,5 +6,4 @@ from [Tamara Munzner: Keynote on Visualization Principles](http://vimeo.com/2620
 
  * Harness visual perception for data analysis tasks
  * Type of data dictates visual encoding possibilities
- * Challenge: apply established principles using new technologies
- * Keys: know the data, know the user, know the tasks (questions)
+ * The "best" visualization depends on the data and task

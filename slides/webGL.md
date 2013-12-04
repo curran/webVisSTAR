@@ -6,3 +6,4 @@
  * Write shaders using [GLSL](http://en.wikipedia.org/wiki/OpenGL_Shading_Language) to process the data
  * Standard OpenGL techniques for 3D rendering and lighting
  * Steep learning curve, low level API
+ * [WebGL Example](examples/ide.html#webGL)

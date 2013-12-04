@@ -1,5 +1,6 @@
 # Schneiderman's Mantra
 
+ * Visualization user interface design guidelines:
  * Overview first
  * Zoom and filter
  * Details on demand

@@ -1,5 +1,5 @@
 # Mackinlay's Theory
-<img src="images/mackinlay.png"></img>
+<img height="500" src="images/mackinlay.png"></img>
 
 from Jock Mackinlay's 1986 paper:
 

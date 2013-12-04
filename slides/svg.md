@@ -6,3 +6,4 @@
  * Maintaining a DOM tree representing graphical elements
  * CSS applies to SVG elements
  * Cannot draw as many shapes as Canvas
+ * [SVG Example](examples/ide.html#svg)

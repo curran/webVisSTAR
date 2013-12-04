@@ -5,3 +5,4 @@
  * You must calculate hit-detection yourself
  * Executing commands in a stateful graphics context
  * Closer to metal than SVG, highly optimizable
+ * [Canvas Example](examples/ide.html#canvasSmiley)

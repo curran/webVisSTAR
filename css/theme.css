@@ -70,6 +70,7 @@ a:hover {
 
 #slide {
   position: fixed;
+  overflow-y: auto;
   top: 0%;
   height: 100%;
   left: 20%;

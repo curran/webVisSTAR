@@ -2,3 +2,4 @@
     { "title": "Anscombe's Quartet", "name": "anscombe", "type": "slide" },
     { "title": "Public Data Sets", "name": "datasets", "type": "slide" },
     { "title": "Data Reduction", "name": "reduction", "type": "slide" },
+    { "title": "Data Integration", "name": "integration", "type": "slide" },
