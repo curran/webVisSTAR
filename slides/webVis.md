@@ -1,5 +1,6 @@
 # Visualization with Web Graphics
 
+ * Why? HTML5 is becoming the dominant platform
  * Challenge: apply established principles using new technologies
  * For conventional charts, consider [HighCharts](http://www.highcharts.com/) or [NVD3](http://nvd3.org/)
  * If the task involves a map, consider [Leaflet](http://leafletjs.com/)
